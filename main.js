@@ -2,7 +2,7 @@ Vue.component('component', {
     template: `
                 <div class="component">
                     <button @click="updateData" class="updateButton">點擊更新 component 數據</button>
-                    <p>{{componentMsg}}</p>
+                    <h3>{{componentMsg}}</h3>
                 </div>
             `,
     data() {
@@ -23,20 +23,20 @@ Vue.component('component', {
         console.log('組件創建完成，componentMsg 為：', this.$data.componentMsg); // 組件創建完成，componentMsg 為： 我是來自 component 的數據
     },
     beforeMount() {
-        const h1Tag = document.querySelector('h1');
-        console.log('DOM 掛載之前，<p> 為：', h1Tag); // DOM 掛載之前，<p> 為：null
+        const h3Tag = document.querySelector('h3');
+        console.log('DOM 掛載之前，<h3> 為：', h3Tag); // DOM 掛載之前，<h3> 為：null
     },
     mounted() {
-        const h1Tag = document.querySelector('h1');
-        console.log('DOM 掛載完成，<p> 為：', h1Tag); // DOM 掛載完成，<p> 為： <p>​我是來自 component 的數據​</p>​
+        const h3Tag = document.querySelector('h3');
+        console.log('DOM 掛載完成，<h3> 為：', h3Tag); // DOM 掛載完成，<h3> 為： <h3>​我是來自 component 的數據​</h3>​
     },
     beforeUpdate() {
-        const h1Tag = document.querySelector('h1');
-        console.log('更新之前的 <p> 內容為：', h1Tag.innerText); // 更新之前的 <p> 內容為： 我是來自 component 的數據
+        const h3Tag = document.querySelector('h3');
+        console.log('更新之前的 <h3> 內容為：', h3Tag.innerText); // 更新之前的 <h3> 內容為： 我是來自 component 的數據
     },
     updated() {
-        const h1Tag = document.querySelector('h1');
-        console.log('更新之後的 <p> 內容為：', h1Tag.innerText); // 更新之後的 <p> 內容為： 更新之後的 <p> 內容為： component 的數據被更改了！
+        const h3Tag = document.querySelector('h3');
+        console.log('更新之後的 <h3> 內容為：', h3Tag.innerText); // 更新之後的 <h3> 內容為： 更新之後的 <h3> 內容為： component 的數據被更改了！
     },
     beforeDestroy() {
         console.log('銷毀之前');
