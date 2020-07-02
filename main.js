@@ -12,7 +12,8 @@ Vue.component('component', {
     },
     methods: {
         updateData() {
-            this.componentMsg = '被更改後的 component 數據！'
+            const num = Math.floor(Math.random() * 100);
+            this.componentMsg = `component 數據被更改了！ ${num}`;
         }
     },
     beforeCreate() {
