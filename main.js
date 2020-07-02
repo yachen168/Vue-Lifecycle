@@ -1,6 +1,6 @@
 Vue.component('component', {
     template: `
-                <div>
+                <div class="component">
                     <h1>{{componentMsg}}</h1>
                     <button @click="updateData" class="updateButton">更新 component 數據</button>
                 </div>
