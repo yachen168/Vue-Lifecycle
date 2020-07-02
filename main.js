@@ -13,7 +13,7 @@ Vue.component('component', {
     methods: {
         updateData() {
             const num = Math.floor(Math.random() * 100);
-            this.componentMsg = `component 數據被更改了！ ${num}`;
+            this.componentMsg = `component 的數據被更改了！ ${num}`;
         }
     },
     beforeCreate() {
@@ -36,7 +36,7 @@ Vue.component('component', {
     },
     updated() {
         const h1Tag = document.querySelector('h1');
-        console.log('更新之後的 <h1> 內容為：', h1Tag.innerText); // 更新之後的 <h1> 內容為： 被更改後的 component 數據！
+        console.log('更新之後的 <h1> 內容為：', h1Tag.innerText); // 更新之後的 <h1> 內容為： 更新之後的 <h1> 內容為： component 的數據被更改了！
     },
     beforeDestroy() {
         console.log('銷毀之前');
