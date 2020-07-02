@@ -22,6 +22,14 @@ button {
     background-color: rgb(75, 167, 243);
 }
 
+.updateButton:hover {
+    background-color: rgb(77, 174, 253);
+}
+
 .toggleComponentButton {
     background-color: rgb(235, 92, 92);
+}
+
+.toggleComponentButton:hover {
+    background-color: rgb(245, 98, 98);
 }
