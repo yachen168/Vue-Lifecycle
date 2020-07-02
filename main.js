@@ -5,7 +5,6 @@ Vue.component('component', {
                     <button @click="updateData" class="updateButton">更新 component 數據</button>
                 </div>
             `,
-    props: ['title'],
     data() {
         return {
             componentMsg: '我是來自 component 的數據'
