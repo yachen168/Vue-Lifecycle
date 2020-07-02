@@ -49,19 +49,18 @@ Vue.component('component', {
     },
     deactivated() {
         console.log('組件被停用');
-    },
-
+    }
 });
 
 const vm = new Vue({
     el: '#app',
     data: {
-        isDisplay: true,
+        isComponentDisplay: true
     },
     template: `
                 <div>
                     <keep-alive> 
-                        <component v-if="isDisplay"></component>
+                        <component v-if="isComponentDisplay"></component>
                     </keep-alive> 
                     <button @click="toggleComponent" class="toggleComponentButton"> 創建 / 銷毀 component</button>
                     <p>註：在 console 中觀察</p>
@@ -69,7 +68,7 @@ const vm = new Vue({
             `,
     methods: {
         toggleComponent() {
-            this.isDisplay = !this.isDisplay;
+            this.isComponentDisplay = !this.isComponentDisplay;
         }
     }
 });
