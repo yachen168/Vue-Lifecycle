@@ -62,7 +62,7 @@ const vm = new Vue({
                     <keep-alive> 
                         <component v-if="isComponentDisplay"></component>
                     </keep-alive> 
-                    <button @click="toggleComponent" class="toggleComponentButton"> 創建 / 銷毀 component</button>
+                    <button @click="toggleComponent" class="toggleComponentButton">無 keep-alive：創建 / 銷毀<br>有 keep-alive：激活 / 停用<br>component</button>
                     <p>註：在 console 中觀察</p>
                 </div>
             `,
