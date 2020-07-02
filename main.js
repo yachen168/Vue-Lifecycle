@@ -27,7 +27,7 @@ Vue.component('component', {
     },
     mounted() {
         const h1Tag = document.querySelector('h1');
-        console.log('DOM 掛載完成，<h1> 為：', h1Tag); // DOM 掛載完成，<p> 為： <h1>​我是來自 component 的數據​</h1>​
+        console.log('DOM 掛載完成，<h1> 為：', h1Tag); // DOM 掛載完成，<h1> 為： <h1>​我是來自 component 的數據​</h1>​
     },
     beforeUpdate() {
         const h1Tag = document.querySelector('h1');
