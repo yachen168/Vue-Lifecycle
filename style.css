@@ -1,0 +1,23 @@
+body {
+    text-align: center;
+    font-family: 微軟正黑體;
+}
+
+button {
+    width: 250px;
+    padding: 5px;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.updateButton {
+    margin-bottom: 10px;
+    background-color: rgb(75, 167, 243);
+}
+
+.toggleComponentButton {
+    background-color: rgb(235, 92, 92);
+}
