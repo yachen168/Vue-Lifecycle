@@ -1,12 +1,12 @@
-# Vue Instance Lifecycle
+# Vue - Instance Lifecycle Hooks
 ## 目標
-展示出 Vue instance 生命週期每個階段。
+演示出所有 Lifecycle Hooks。
 
 ## 結果
 [Demo](https://yachen168.github.io/Vue-Instance-Lifecycle/)
 
 ## 學習重點
-Vue instance 生命週期：
+Instance Lifecycle Hooks：
 - beforeCreate
 - created
 - beforeMount
