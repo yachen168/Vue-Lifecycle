@@ -55,20 +55,33 @@ Vue.component('component', {
 const vm = new Vue({
     el: '#app',
     data: {
-        isComponentDisplay: true
+        isComponentWithOutKeepAliveDisplay: false,
+        isComponentWithKeepAliveDisplay: false
     },
     template: `
                 <div>
-                    <keep-alive> 
-                        <component v-if="isComponentDisplay"></component>
-                    </keep-alive> 
-                    <button @click="toggleComponent" class="toggleComponentButton">無 keep-alive：創建 / 銷毀<br>有 keep-alive：激活 / 停用<br>component</button>
-                    <p>註：在 console 中觀察</p>
+                    <section>
+                        <h2>無 keep-alive：</h2>
+                        <button @click="toggleComponentWithOutKeepAlive" class="toggleComponentButton">無 keep-alive：<br>創建 / 銷毀 component</button>
+                        <component v-if="isComponentWithOutKeepAliveDisplay"></component>
+                    </section>
+                    
+                    <section>
+                        <h2>有 keep-alive：</h2>
+                        <button @click="toggleComponentWithKeepAlive" class="toggleComponentButton">有 keep-alive：<br>激活 / 停用 component</button>
+                        <keep-alive> 
+                            <component v-if="isComponentWithKeepAliveDisplay"></component>
+                        </keep-alive>
+                    </section>
+                    <p>註：在 console 中觀察 lifecycle</p>
                 </div>
             `,
     methods: {
-        toggleComponent() {
-            this.isComponentDisplay = !this.isComponentDisplay;
-        }
+        toggleComponentWithOutKeepAlive() {
+            this.isComponentWithOutKeepAliveDisplay = !this.isComponentWithOutKeepAliveDisplay;
+        },
+        toggleComponentWithKeepAlive() {
+            this.isComponentWithKeepAliveDisplay = !this.isComponentWithKeepAliveDisplay;
+        },
     }
 });

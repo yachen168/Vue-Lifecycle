@@ -3,6 +3,10 @@ body {
     font-family: 微軟正黑體;
 }
 
+section {
+    margin-bottom: 100px;
+}
+
 .component {
     border: 2px solid rgb(131, 127, 127);
 }
