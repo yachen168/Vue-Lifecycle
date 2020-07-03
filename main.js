@@ -36,7 +36,7 @@ Vue.component('component', {
     },
     updated() {
         const h3Tag = document.querySelector('h3');
-        console.log('更新之後的 <h3> 內容為：', h3Tag.innerText); // 更新之後的 <h3> 內容為： 更新之後的 <h3> 內容為： component 的數據被更改了！
+        console.log('更新之後的 <h3> 內容為：', h3Tag.innerText); // 更新之後的 <h3> 內容為： component 的數據被更改了！
     },
     beforeDestroy() {
         console.log('銷毀之前');
