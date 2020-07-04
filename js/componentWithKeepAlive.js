@@ -31,11 +31,11 @@ export default {
     },
     beforeUpdate() {
         const h3Tag = document.querySelector('.componentWithKeepAlive h3');
-        console.log('更新之前的 <h3> 內容為：', h3Tag.innerText); // 更新之前的 <h3> 內容為： 我是來自 component 的數據
+        console.log('DOM 更新之前的 <h3> 內容為：', h3Tag.innerText); // DOM 更新之前的 <h3> 內容為： 我是來自 component 的數據
     },
     updated() {
         const h3Tag = document.querySelector('.componentWithKeepAlive h3');
-        console.log('更新之後的 <h3> 內容為：', h3Tag.innerText); // 更新之後的 <h3> 內容為： component 的數據被更改了！
+        console.log('DOM 更新之後的 <h3> 內容為：', h3Tag.innerText); // DOM 更新之後的 <h3> 內容為： component 的數據被更改了！
     },
     beforeDestroy() {
         console.log('銷毀之前');
