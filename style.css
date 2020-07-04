@@ -8,11 +8,8 @@ section {
     margin-top: 80px;
 }
 
-p {
-    font-size: 18px;
-}
-
-.component {
+.componentWithOutKeepAlive,
+.componentWithKeepAlive {
     width: 320px;
     margin: 0 auto;
     border: 2px solid rgb(131, 127, 127);
