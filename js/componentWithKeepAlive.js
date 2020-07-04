@@ -16,10 +16,10 @@ export default {
         }
     },
     beforeCreate() {
-        console.log('組件創建之前，componentMsg 為：', this.$data.componentMsg); // 組件創建之前，componentMsg 為 undefined
+        console.log('instance 創建之前，componentMsg 為：', this.$data.componentMsg); // instance 創建之前，componentMsg 為 undefined
     },
     created() {
-        console.log('組件創建完成，componentMsg 為：', this.$data.componentMsg); // 組件創建完成，componentMsg 為： 0
+        console.log('instance 創建完成，componentMsg 為：', this.$data.componentMsg); // instance 創建完成，componentMsg 為： 0
     },
     beforeMount() {
         const h3Tag = document.querySelector('.componentWithKeepAlive h3');
@@ -39,9 +39,9 @@ export default {
     },
     // 有使用 <keep-alive>
     activated() {
-        console.log('組件被激活了');
+        console.log('instance 被激活了');
     },
     deactivated() {
-        console.log('組件被停用了');
+        console.log('instance 被緩存了');
     }
 };
