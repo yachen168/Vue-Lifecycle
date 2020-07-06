@@ -37,11 +37,18 @@ export default {
         const h3Tag = document.querySelector('.componentWithOutKeepAlive h3');
         console.log('DOM 更新之後的 <h3> 內容為：', h3Tag.innerText); // DOM 更新之後的 <h3> 內容為： num+1
     },
-    // 無使用 <keep-alive>
+    // 無使用 <keep-alive>，instance 會 destroyed
     beforeDestroy() {
         console.log('instance 被銷毀之前');
     },
     destroyed() {
         console.log('instance 被銷毀完成');
+    },
+    // 無使用 <keep-alive>，不會觸發 activated 與 deactivated
+    activated() {
+        console.log('instance 被激活了');
+    },
+    deactivated() {
+        console.log('instance 被緩存了');
     }
 };
