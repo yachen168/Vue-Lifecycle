@@ -31,11 +31,11 @@ export default {
     },
     beforeUpdate() {
         const h3Tag = document.querySelector('.componentWithOutKeepAlive h3');
-        console.log('DOM 更新之前的 <h3> 內容為：', h3Tag.innerText); // DOM 更新之前的 <h3> 內容為： num
+        console.log('數據已更新，但 DOM 尚未重新渲染，<h3> 內容為：', h3Tag.innerText); // 數據已更新，但 DOM 尚未重新渲染： num
     },
     updated() {
         const h3Tag = document.querySelector('.componentWithOutKeepAlive h3');
-        console.log('DOM 更新之後的 <h3> 內容為：', h3Tag.innerText); // DOM 更新之後的 <h3> 內容為： num+1
+        console.log('數據已更新，DOM 已重新渲染，<h3> 內容為：', h3Tag.innerText); // 數據已更新，DOM 已重新渲染，<h3> 內容為： num+1
     },
     // 無使用 <keep-alive>，instance 會 destroyed
     beforeDestroy() {
