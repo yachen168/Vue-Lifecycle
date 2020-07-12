@@ -1,12 +1,12 @@
-# Vue - Instance Lifecycle Hooks
+# Vue - Instance Lifecycle
 ## 目標
-演示出所有 Lifecycle Hooks。
+演示出 Vue instance 的生命週期，並比較有使用 \<keep-alive> 與無使用 \<keep-alive> 時，兩者生命週期有何差異。
 
 ## 結果
 [Demo](https://yachen168.github.io/Vue-Instance-Lifecycle/)
 
 ## 學習重點
-Instance Lifecycle Hooks：
+### Instance Lifecycle Hooks：
 - beforeCreate
 - created
 - beforeMount
